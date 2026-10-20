@@ -1,0 +1,30 @@
+# TMDB (The Movie Database) 代理规则集
+# 生成日期：2026-10-20（下列主机均经 DNS 解析 + HTTP 访问核实）
+# 兼容：Open-Box / mihomo / Clash（DOMAIN、DOMAIN-SUFFIX 语法）
+# 用法：Open-Box → 站点集 → 添加规则 → 规则集链接 → 填 raw 地址；
+#       https://raw.githubusercontent.com/wyjh/rule/main/rules/openbox/tmdb.list
+
+# 主站 / API / 登录 / 开发者文档 / 文件（themoviedb.org）
+DOMAIN,themoviedb.org
+DOMAIN,www.themoviedb.org
+DOMAIN,api.themoviedb.org
+DOMAIN,auth.themoviedb.org
+DOMAIN,developer.themoviedb.org
+DOMAIN,files.themoviedb.org
+DOMAIN,media.themoviedb.org
+
+# 短域名与 API / 图片 / 文件节点（tmdb.org）
+DOMAIN,tmdb.org
+DOMAIN,api.tmdb.org
+DOMAIN,image.tmdb.org
+DOMAIN,images.tmdb.org
+DOMAIN,files.tmdb.org
+
+# 图片 / 文件 CDN（Bunny CDN，客户端有时直接请求 CDN 地址）
+DOMAIN,tmdb-image-prod.b-cdn.net
+DOMAIN,tmdb-web-image-prod.b-cdn.net
+DOMAIN,tmdb-web-files-prod.b-cdn.net
+
+# 兜底：两个主域以后新增的子域也一并走代理
+DOMAIN-SUFFIX,themoviedb.org
+DOMAIN-SUFFIX,tmdb.org
