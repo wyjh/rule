@@ -1,6 +1,10 @@
-# TMDB TheMovieDB
-DOMAIN-SUFFIX,shturl.cc/ywLb
+# TMDB (The Movie Database)
+# 主站 www / API api / 图片 image / 文件 files 都在 themoviedb.org 下；
+# tmdb.org 是短域名（301 到 themoviedb.org），api./image./images./files. 也在其下。
+# DOMAIN-SUFFIX 覆盖所有子域，所以下面两条就够了。
+DOMAIN-SUFFIX,themoviedb.org
 DOMAIN-SUFFIX,tmdb.org
-DOMAIN-SUFFIX,image.tmdb.org
-DOMAIN-SUFFIX,images.tmdb.org
-DOMAIN-SUFFIX,files.tmdb.org
+
+# 图片 / 文件的 CDN（一般不用加：客户端仍以 image.tmdb.org、files.themoviedb.org 发起请求）
+# DOMAIN-SUFFIX,tmdb-image-prod.b-cdn.net
+# DOMAIN-SUFFIX,tmdb-web-files-prod.b-cdn.net
